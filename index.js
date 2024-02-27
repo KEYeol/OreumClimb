@@ -40,11 +40,12 @@ let pinInitialLeft = 0;
                 // Firestore에서 해당 번호의 placeName 필드값 가져오기
                 const doc = await db.collection('oreum').doc(pinNumber).get();
                 const placeName = doc.data().placeName;
+                const fileName = doc.data().fileName;
 
                 console.log(placeName);
                 // 이미지 추가
                 const img = document.createElement('img');
-                img.src = `imgs/${placeName}_icon.png`;
+                img.src = `imgs/${fileName}_icon.png`;
                 img.alt = placeName;
                 img.width = 400;
                 img.height = 140;

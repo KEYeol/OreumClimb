@@ -13,8 +13,9 @@ if (pinNumber) {
             const data = doc.data();
 
             const placeName = data.placeName; // placeName 가져오기
+            const fileName = data.fileName;
             const header = document.querySelector(".header");
-            header.style.backgroundImage = `url(imgs/${placeName}.png)`; // 이미지 경로 설정
+            header.style.backgroundImage = `url(imgs/${fileName}.png)`; // 이미지 경로 설정
 
             // placeName을 logo에 표시
             document.querySelector(".logo").innerText = data.placeName;
